@@ -37,7 +37,7 @@ if st.session_state.step == 1:
     if st.button("맞지?"):
         if answer.strip().lower() == questions[1]['answer'].lower():
             st.session_state.name_correct = True
-            st.session_state.step += 2
+            st.session_state.step += 1
         else:
             st.warning("정답이 아닙니다. 다시 시도하세요.")
             reset_quiz()
@@ -48,7 +48,7 @@ elif st.session_state.step == 2:
     if st.button("맞지?"):
         if answer.strip().lower() == questions[2]['answer'].lower():
             st.session_state.food_correct = True
-            st.session_state.step += 3
+            st.session_state.step += 2
         else:
             st.warning("정답이 아닙니다. 다시 시도하세요.")
             reset_quiz()
