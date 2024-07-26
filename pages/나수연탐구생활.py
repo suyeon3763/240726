@@ -23,7 +23,7 @@ questions = {
     },
     3: {
         'question': "제작자가 가장 좋아하는 음식은 무엇인가요?",
-        'answer': "윤리"
+        'answer': "초밥"
     }
 }
 
