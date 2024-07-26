@@ -28,7 +28,7 @@ questions = {
     }
 }
 
-st.title('퀴즈를 통한 채팅 프로그램')
+st.title('나는 어떤 사람일까요?')
 
 # Display the current question based on the step
 if st.session_state.step == 1:
