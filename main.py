@@ -100,13 +100,13 @@ if st.button('결과 보기'):
     }
 
     # 선택한 MBTI의 정보 가져오기
-info = mbti_info.get(mbti, {'특징': '정보 없음', '직업': [], '잘 맞는 MBTI': []})
+    info = mbti_info.get(mbti, {})
 
-# 결과 출력
-st.write(f"**{name}님! 당신의 MBTI는 {mbti}입니다.**")
-st.write(f"### 특징")
-st.write(info.get('특징', "정보 없음"))
-st.write(f"### 어울리는 직업")
-st.write(", ".join(info.get('직업', ["정보 없음"])))
-st.write(f"### 잘 맞는 MBTI 유형")
-st.write(", ".join(info.get('잘 맞는 MBTI', ["정보 없음"])))
+    # 결과 출력
+    st.write(f"**{name}님! 당신의 MBTI는 {mbti}입니다.**")
+    st.write(f"### 특징")
+    st.write(info.get('특징', ""))
+    st.write(f"### 어울리는 직업")
+    st.write(", ".join(info.get('직업', [])))
+    st.write(f"### 잘 맞는 MBTI 유형")
+    st.write(", ".join(info.get('잘 맞는 MBTI', [])))
