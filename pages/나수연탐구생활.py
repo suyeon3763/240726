@@ -27,13 +27,13 @@ questions = {
     }
 }
 
-st.title('퀴즈를 통한 채팅 프로그램')
+st.title('나는 어떤 사람일까요?')
 
 # Display the current question based on the step
 if st.session_state.step == 1:
     st.write(questions[1]['question'])
     answer = st.text_input("정답을 입력하세요:", key='name')
-    if st.button("제출", key='submit1'):
+    if st.button("맞지?", key='submit1'):
         if answer.strip().lower() == questions[1]['answer'].lower():
             st.session_state.name_correct = True
         else:
@@ -46,7 +46,7 @@ if st.session_state.step == 1:
 elif st.session_state.step == 2:
     st.write(questions[2]['question'])
     answer = st.text_input("정답을 입력하세요:", key='food')
-    if st.button("제출", key='submit2'):
+    if st.button("맞지?", key='submit2'):
         if answer.strip().lower() == questions[2]['answer'].lower():
             st.session_state.food_correct = True
         else:
@@ -59,7 +59,7 @@ elif st.session_state.step == 2:
 elif st.session_state.step == 3:
     st.write(questions[3]['question'])
     answer = st.text_input("정답을 입력하세요:", key='subject')
-    if st.button("제출", key='submit3'):
+    if st.button("맞지?", key='submit3'):
         if answer.strip().lower() == questions[3]['answer'].lower():
             st.session_state.subject_correct = True
         else:
