@@ -15,15 +15,15 @@ if 'step' not in st.session_state:
 questions = {
     1: {
         'question': "제작자의 이름은 무엇인가요?",
-        'answer': "홍길동"
+        'answer': "나수연"
     },
     2: {
-        'question': "제작자가 가장 좋아하는 음식은 무엇인가요?",
-        'answer': "김치찌개"
+        'question': "제작자가 가르치는 과목은 무엇인가요?",
+        'answer': "윤리"
     },
     3: {
-        'question': "제작자가 가르치는 과목은 무엇인가요?",
-        'answer': "수학"
+        'question': "제작자가 가장 좋아하는 음식은 무엇인가요?",
+        'answer': "초밥"
     }
 }
 
