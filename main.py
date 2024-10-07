@@ -40,9 +40,9 @@ def existential_quiz():
     # 질문이 남아있을 때
     if current_question < len(questions):
         question = questions[current_question]
-        answer = st.radio(question, ["매우 그렇다", "그렇다", "보통이다", "그렇지 않다", "전혀 그렇지 않다"])
+        answer = st.radio(question, ["매우 그렇다", "그렇다", "보통이다", "그렇지 않다", "전혀 그렇지 않다"], key=current_question)
 
-        if st.button("다음"):
+        if st.button("다음 질문", key="next_question"):
             st.session_state.answers.append(answer)
 
             # 점수 계산
@@ -51,7 +51,6 @@ def existential_quiz():
 
             # 다음 질문으로 이동
             st.session_state.current_question += 1
-            st.experimental_rerun()
 
     # 모든 질문이 끝났을 때
     else:
@@ -67,10 +66,10 @@ def existential_quiz():
             st.session_state.current_question = 0
             st.session_state.answers = []
             st.session_state.philosophers_score = {"키르케고르": 0, "하이데거": 0, "야스퍼스": 0, "사르트르": 0}
-            st.experimental_rerun()
 
 # Streamlit 앱 실행
 st.title("실존주의 철학자 테스트")
 st.write("10개의 질문에 답하고 당신과 가장 가까운 실존주의 철학자를 찾아보세요!")
 
 existential_quiz()
+
